@@ -38,3 +38,8 @@ It returns one paste-ready command:
 
 The official `/goal` command works best when it has a clear durable objective, verification evidence, and a stopping condition. This skill gives you a repeatable way to draft that contract before you start a long-running Codex session.
 
+## Security
+
+This is a prompt-only Codex skill. It contains no scripts, binaries, MCP servers, shell commands, network calls, or credential handling.
+
+The skill is designed to output text for the official `/goal` command, not to execute the goal or update your active thread directly. It also includes safety rules for secrets, destructive operations, exfiltration, production changes, and privileged actions.
