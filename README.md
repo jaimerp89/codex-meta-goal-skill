@@ -9,7 +9,7 @@ Compile rough long-running intentions into paste-ready Codex CLI `/goal` command
 Ask Codex to install this skill:
 
 ```text
-$skill-installer install https://github.com/jaimerp89/codex-meta-goal-skill/tree/main/meta-goal
+$skill-installer install https://github.com/jaimerp89/codex-meta-goal-skill/tree/v0.1.0/meta-goal
 ```
 
 Or install manually by copying the `meta-goal` folder into:
