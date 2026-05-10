@@ -135,7 +135,7 @@ Template:
 - `check/audit/benchmark/prove/does this really`: usually `Evidence`; require a checklist and cited proof.
 - `choose/should we/which is best/decide`: usually `Decision`; require options, criteria, evidence, and a no-implementation boundary.
 - `try X; if not, explain why`: use an either/or completion criterion so the goal can close honestly on proven blockage.
-- `next goal` or `siguiente goal`: compile a paste-ready command only if the user asks for a goal draft; do not start or update the current active goal.
+- `next goal`: compile a paste-ready command only if the user asks for a goal draft; do not start or update the current active goal.
 
 ## Quality Checklist
 
@@ -232,7 +232,7 @@ Output:
 Evidence rough request:
 
 ```text
-sube el gold si puedes; si no, dime exactamente por donde se rompe el embudo
+promote gold observations if possible; if not, show exactly where the evidence funnel breaks
 ```
 
 Output:
