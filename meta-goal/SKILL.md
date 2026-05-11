@@ -11,6 +11,53 @@ Turn a rough human intention into one paste-ready Codex CLI `/goal <objective>` 
 
 The output must help `/goal` do its real job: keep a long-running Codex thread oriented toward a durable completion contract.
 
+## Operating Hypothesis
+
+Optimize for real verified outcomes without losing concise contracts, auditability, or safety boundaries.
+
+Additional rules:
+
+- Read the rough request like a skeptical reviewer.
+- Include the most likely false-positive completion mode in the stop or done criteria.
+- Require explicit distinction between passed, failed, blocked, and unverified states for audits.
+- Do not let a goal weaken guards, fabricate evidence, touch secrets, or mutate production by implication.
+- Prefer the shortest command that still preserves outcome, evidence, boundaries, and honest blocker closure.
+
+## Ambiguity Policy
+
+Preserve adversarial guardrails while handling ambiguity without unnecessary questions.
+
+Additional rules:
+
+- Separate critical unknowns from safe assumptions; ask one question only when the missing fact makes the goal unsafe, misleading, or impossible to score.
+- Bake safe assumptions into the goal or optional notes instead of stalling.
+- For Behavior goals, require smoke evidence such as tests, logs, screenshots, browser checks, or an equivalent local proof.
+- For audits and decisions, keep explicit passed, failed, blocked, or unverified status per key requirement.
+
+## Evidence And Workspace Policy
+
+Increase Evidence-task ambition while preserving safety-heavy closure.
+
+Additional rules:
+
+- For Evidence tasks, first try to produce a real verified outcome inside the disposable workspace; close by blocker only after the highest-value route is reproduced and exhausted.
+- If real promotion/data mutation is unsafe or impossible, prove the blocker with command output, metrics, and artifact paths.
+- Business numbers are constraints, not budgets for the goal engine.
+- Any command that would write to a source project or production path must be blocked before execution.
+
+## Long-Running Goal Policy
+
+For long-running goals:
+
+- Push first for a real verified result, especially on Evidence tasks.
+- Keep the `/goal` compact, artifact-aware, and easy to score.
+- Block source-project writes, production, secrets, destructive operations, and scope drift.
+- Treat business quantities such as seats, days, users, rows, candidates, prices, percentages, or limits as domain constraints, never as token budgets.
+- For any run that might touch a source project path, require correction, blocking, or explicit read-only treatment before execution.
+- In the final report, require status per key requirement as `passed`, `failed`, `blocked`, or `unverified`.
+- For blocker closure, require command output, before/after or baseline metrics when available, artifact paths, and the next useful action.
+- Do not over-expand: the command should be one durable completion contract, not a plan, checklist, or milestone tree.
+
 ## Workflow
 
 1. Extract the intended outcome, scope, constraints, verification evidence, and stopping conditions from the user's request.
@@ -143,7 +190,7 @@ Template:
 - `check/audit/benchmark/prove/does this really`: usually `Evidence`; require a checklist and cited proof.
 - `choose/should we/which is best/decide`: usually `Decision`; require options, criteria, evidence, and a no-implementation boundary.
 - `try X; if not, explain why`: use an either/or completion criterion so the goal can close honestly on proven blockage.
-- `next goal`: compile a paste-ready command only if the user asks for a goal draft; do not start or update the current active goal.
+- `next goal` or `siguiente goal`: compile a paste-ready command only if the user asks for a goal draft; do not start or update the current active goal.
 
 ## Quality Checklist
 
@@ -240,7 +287,7 @@ Output:
 Evidence rough request:
 
 ```text
-promote gold observations if possible; if not, show exactly where the evidence funnel breaks
+sube el gold si puedes; si no, dime exactamente por donde se rompe el embudo
 ```
 
 Output:
